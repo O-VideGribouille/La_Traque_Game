@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1607375901 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\init.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"valeurs.h"
+
+1607376138 c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\valeurs.h
+
+1607376136 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<string.h>
+	"valeurs.h"
+
