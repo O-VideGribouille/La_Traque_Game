@@ -2,16 +2,23 @@
 #define VALEURS_H_INCLUDED
 
 //CONSTENTES
-#define TAILLEL 29
-#define TAILLEH 14
-#define PVIE 1
-#define MVIE 4
-#define MONK 'M'
-#define PISTEUR1 'P'
-#define PISTEUR2 '?'
-#define PISTEUR3 '!'
-#define PMIN 1
-#define PMAX 10
+#define TAILLEH 14 //taille plateau
+#define TAILLEL 29 //taille plateau
+
+#define HMAX 13 //valeur maximum a entrer pour positionnementp
+#define LMAX 27 //valeur maximum a entrer pour positionnementp
+
+#define RANDOMLMAX 26
+#define RANDOMHMAX 12
+
+#define PVIE 1 //nombre de vie des pisteurs
+#define MVIE 4 // noombre de vie de Monk C
+#define MONK 'M' //représentation visuel de Monk C
+#define PISTEUR1 'P' //Représentation visuel de pisteur fixe
+#define PISTEUR2 '!' //Représentation visuel de pisteur en observation
+#define PISTEUR3 '?' //Représentation visuel de pisteur en attente de nouvelles coordonees
+#define PMIN 1 //valeur minimum de pisteur
+#define PMAX 10 // valeur maximum de pisteur
 
 //STRUCTURES
 
@@ -28,9 +35,10 @@ typedef struct str_coord{
 //Caracteristiques - Pisteurs
 typedef struct str_Pcara{
 
-    int n_Pvie;
-    str_coord n_Ppos;
-    char chr_Pname;
+    int n_Pvie; //nombre de vie
+    str_coord n_Ppos; //position
+    char *chr_Pname; // nom
+    //creation d'un booleen pour valider leur présence ?
 
 }str_Pcara;
 
@@ -39,7 +47,7 @@ typedef struct str_Mcara{
 
     int n_Mvie;
     str_coord n_Mpos;
-    char chr_Mname;
+    char *chr_Mname;
 }str_Mcara;
 
 //possibilité du nombre de pisteurs
@@ -86,6 +94,11 @@ typedef struct str_plateau{
 
 //PROTOTYPES
 void Init(struct str_plateau *plateau);
+void Affichage(char tabJ[TAILLEH][TAILLEL]);
+char Demande_nb_P();
+void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara);
+void Positionnement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara);
+void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk);
 
 
 #endif // VALEURS_H_INCLUDED
