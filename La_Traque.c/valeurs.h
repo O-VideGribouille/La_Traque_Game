@@ -13,7 +13,8 @@
 
 #define PVIE 1 //nombre de vie des pisteurs
 #define MVIE 4 // noombre de vie de Monk C
-#define MONK 'M' //représentation visuel de Monk C
+//#define MONK 'M' //représentation visuel de Monk C
+#define MONK 16 //représentation visuel de Monk C
 #define PISTEUR1 'P' //Représentation visuel de pisteur fixe
 #define PISTEUR2 '!' //Représentation visuel de pisteur en observation
 #define PISTEUR3 '?' //Représentation visuel de pisteur en attente de nouvelles coordonees
@@ -76,7 +77,7 @@ typedef struct str_Monk{
 typedef struct str_map{
 
     char tabPiste[TAILLEH][TAILLEL];
-    char tabMonk[TAILLEH][TAILLEL];
+    int tabMonk[TAILLEH][TAILLEL];
 
 }str_map;
 
@@ -91,14 +92,26 @@ typedef struct str_plateau{
 
     str_plateau plateau;
 
+//VARIABLES
+int deadM;//booleen
 
 //PROTOTYPES
 void Init(struct str_plateau *plateau);
 void Affichage(char tabJ[TAILLEH][TAILLEL]);
 char Demande_nb_P();
 void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara);
-void Positionnement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara);
-void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk);
+void Positionnement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], struct str_Mcara *Mcara);
+void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk);
+void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk);
+//void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste);
+void Observation_P(char tabJ[TAILLEH][TAILLEL], str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara);
+//void Observation_P();
 
+//void Deplacement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara);
+
+
+
+int entier(char chr_x);
+int Tirer(int jetD, struct str_Mcara *Mcara);
 
 #endif // VALEURS_H_INCLUDED

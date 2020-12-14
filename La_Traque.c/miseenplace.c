@@ -6,7 +6,7 @@
 #include "valeurs.h"
 
 
-void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk){
+void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk){
 
     int nb_P;
     nb_P=Demande_nb_P();
@@ -26,7 +26,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs2);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
      if(nb_P==3){
         //position pisteurs
@@ -35,7 +35,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs3);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
    /* if(nb_P==4){
         //position pisteurs
@@ -45,7 +45,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs4);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
     if(nb_P==5){
         //position pisteurs
@@ -56,7 +56,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs5);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
     if(nb_P==6){
         //position pisteurs
@@ -68,7 +68,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs6);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
     if(nb_P==7){
         //position pisteurs
@@ -81,7 +81,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs7);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
     if(nb_P==8){
         //position pisteurs
@@ -95,7 +95,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs8);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
     if(nb_P==9){
         //position pisteurs
@@ -110,7 +110,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->ppisteurs9);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }
     if(nb_P==10){
         //position pisteurs
@@ -126,7 +126,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, char
         Positionnement_P(tabJ, &piste->pisteurs10);
 
         //position Monk C
-        Positionnement_M(tabMnK, tabJ, Monk.MonkC);
+        Positionnement_M(tabMnK, tabJ, &Monk->MonkC);
     }*/
 
 //printf("entrer");

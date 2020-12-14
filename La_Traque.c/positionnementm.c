@@ -9,7 +9,7 @@
 int RandomL(int jetD);
 int RandomH(int jetD);
 
-void Positionnement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara){
+void Positionnement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], struct str_Mcara *Mcara){
 
     int n_i, n_j; //boucles
     int n_x, n_y; //coordonees
@@ -22,7 +22,7 @@ void Positionnement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL]
     do{
         //Etape 1 : Coordonees
         //coordonnee de X
-        do{
+     /*   do{
             srand(time(0));//evite que le random soit le meme a chaque premier jet
             n_x=RandomL(jetD);
             if((n_x<=0)||(n_x>=LMAX)){
@@ -45,7 +45,42 @@ void Positionnement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL]
                 ok=1;
             }
             fflush(stdin);
+        }while(ok==0);*/
+
+
+
+        //test
+         do{
+
+            printf("Coordonne X (maximum 26) : ");
+            scanf("%d",&n_x);
+            if((n_x<=0)||(n_x>=LMAX)){
+                printf("Emplacement impossible, veuillez entrer des coordonees existantes\n");
+                    ok=0;
+            }else{
+                ok=1;
+            }
+            fflush(stdin);
         }while(ok==0);
+
+        //coordonnee de Y
+        do{
+            printf("Coordonne Y (maximum 12) : ");
+            scanf("%d",&n_y);
+            if((n_y<=0)||(n_y>=HMAX)){
+                printf("Emplacement impossible, veuillez entrer des coordonees existantes\n");
+                    ok=0;
+            }else{
+                ok=1;
+            }
+            fflush(stdin);
+        }while(ok==0);
+
+
+
+
+
+
 
 
         ok=0;
@@ -86,11 +121,12 @@ void Positionnement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL]
     system("cls");
    // printf("Coordonnee x : %d, y : %d \n", n_x, n_y);
     tabMnK[n_y][n_x]=MONK;
-  //  Affichage(plateau.map_Monk.tabMonk);
+    //Affichage(plateau.map_Monk.tabMonk);
+    system("pause");
 }
 
 int RandomL( int jetD){
-    //lancement des deux dés
+
         jetD= (rand() %
            (RANDOMLMAX - 1 + 1)) + 1;
         printf("%d \n", jetD);
@@ -99,10 +135,11 @@ int RandomL( int jetD){
 }
 
 int RandomH( int jetD){
-    //lancement des deux dés
+
         jetD= (rand() %
            (RANDOMHMAX - 1 + 1)) + 1;
         printf("%d \n", jetD);
 
     return jetD;
 }
+

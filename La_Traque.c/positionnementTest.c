@@ -5,13 +5,14 @@
 //.h
 #include "valeurs.h"
 
-void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
+void Positionnement_Test(char tabJ[TAILLEH][TAILLEL], char tabMnk[TAILLEH][TAILLEL], struct str_Mcara *Mcara){
 
     int n_i, n_j; //boucles
     int n_x, n_y; //coordonees
    // char c;
     int ok=0; //booleen
 
+    printf("\n TEST \n");
     Affichage(plateau.map_P.tabPiste);
 
     do{
@@ -75,13 +76,13 @@ void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
 
     }while(ok==0);
 
-    Pcara->n_Ppos.n_Px=n_x;
-    Pcara->n_Ppos.n_Py=n_y;
+    Mcara->n_Mpos.n_Mx=n_x;
+    Mcara->n_Mpos.n_My=n_y;
 
     system("pause");
     system("cls");
     printf("Coordonnee x : %d, y : %d \n", n_x, n_y);
-    tabJ[n_y][n_x]=PISTEUR1;
+    tabMnk[n_y][n_x]='M';
     Affichage(plateau.map_P.tabPiste);
     system("pause");
     system("cls");

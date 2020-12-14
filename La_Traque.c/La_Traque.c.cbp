@@ -37,6 +37,9 @@
 		<Unit filename="demandeNbP.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="deplacementm.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="init.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -46,7 +49,16 @@
 		<Unit filename="miseenplace.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="observation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="positionnementm.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="positionnementp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="tourdejeu.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="valeurs.h" />
