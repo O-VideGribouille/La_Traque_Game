@@ -14,6 +14,7 @@ void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
 
     Affichage(plateau.map_P.tabPiste);
 
+
     do{
         //Etape 1 : Coordonees
         //coordonnee de X

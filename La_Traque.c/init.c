@@ -40,21 +40,22 @@ extern void Init(struct str_plateau *plateau){
         }
     }
     //initn tab Monk C en Entier
+    int car;
     for(n_i=0; n_i<TAILLEH; n_i++){
         for(n_j=0; n_j<TAILLEL; n_j++){
 
            if(n_i==0){
-                caractere=-1;
+                car=-1;
             }
             if(n_i==13){
-                caractere=-1;
+                car=-1;
             }
              if(n_j==0){
-                caractere=-1;
+                car=-1;
             }
 
             if(n_j==28){
-                caractere=-1;
+                car=-1;
             }
 
            else if((n_i!=0)&&(n_j!=0)&&(n_i!=13)&&(n_j!=28)){

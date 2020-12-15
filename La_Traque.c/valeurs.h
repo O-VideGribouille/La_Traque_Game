@@ -104,8 +104,8 @@ void Positionnement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL],
 void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk);
 void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk);
 //void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste);
-void Observation_P(char tabJ[TAILLEH][TAILLEL], str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara);
-//void Observation_P();
+void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara);
+void Deplacement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara);
 
 //void Deplacement_M(char tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara);
 
@@ -113,5 +113,6 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], str_Pcara *Pcara, int tabMnK[TAI
 
 int entier(char chr_x);
 int Tirer(int jetD, struct str_Mcara *Mcara);
+char OrientPiste();
 
 #endif // VALEURS_H_INCLUDED

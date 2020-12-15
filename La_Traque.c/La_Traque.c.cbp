@@ -40,6 +40,9 @@
 		<Unit filename="deplacementm.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="deplacementp.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="init.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -50,6 +53,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="observation.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="orientation.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="positionnementm.c">
