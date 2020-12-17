@@ -55,6 +55,9 @@
 		<Unit filename="observation.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="observationm.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="orientation.c">
 			<Option compilerVar="CC" />
 		</Unit>

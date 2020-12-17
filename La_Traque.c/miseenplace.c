@@ -6,10 +6,7 @@
 #include "valeurs.h"
 
 
-void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk){
-
-    int nb_P;
-    nb_P=Demande_nb_P();
+void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk, int *nb_P){
 
     if(nb_P==1){
         //position pisteur

@@ -5,7 +5,7 @@
 //.h
 #include "valeurs.h"
 
-extern void Init(struct str_plateau *plateau){
+extern void Init(struct str_plateau *plateau, int *nb_P){
 
     //init du plateau du jeu
     int n_i, n_j;
@@ -39,6 +39,8 @@ extern void Init(struct str_plateau *plateau){
 
         }
     }
+
+    Affichage(plateau->map_P.tabPiste);
     //initn tab Monk C en Entier
     int car;
     for(n_i=0; n_i<TAILLEH; n_i++){
@@ -71,6 +73,7 @@ extern void Init(struct str_plateau *plateau){
     //init des pisteur
     //nombre de pisteur
     //int nb_Pist=0;
+    *nb_P=Demande_nb_P(nb_P);
 
     //init de leur vie
     int n_pVie=PVIE;
@@ -84,6 +87,7 @@ extern void Init(struct str_plateau *plateau){
     plateau->n_p.pisteurs8.n_Pvie=n_pVie;
     plateau->n_p.pisteurs9.n_Pvie=n_pVie;
     plateau->n_p.pisteurs10.n_Pvie=n_pVie;
+
 
     //init de leur nom
     plateau->n_p.pisteurs1.chr_Pname=("1");

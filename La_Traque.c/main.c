@@ -9,19 +9,15 @@ int main()
 {
     printf("La Traque\n \n");
 
+    int nb_P=0;
 
-    Init(&plateau);
-    Affichage(plateau.map_P.tabPiste);
-    Mise_En_Place(plateau.map_P.tabPiste, &plateau.n_p, plateau.map_Monk.tabMonk, &plateau.antagoniste);// positionnement des pisteur et de Monk C
+    Init(&plateau, &nb_P);
+    //Affichage(plateau.map_P.tabPiste);
+    Mise_En_Place(plateau.map_P.tabPiste, &plateau.n_p, plateau.map_Monk.tabMonk, &plateau.antagoniste, nb_P);// positionnement des pisteur et de Monk C
     //début de la boucle de jeu
     do{
-   //printf("x: %d , y: %d", plateau.n_p.pisteurs1.n_Ppos.n_Px, plateau.n_p.pisteurs1.n_Ppos.n_Py );
-    //printf("\nx M: %d , y M: %d", plateau.antagoniste.MonkC.n_Mpos.n_Mx, plateau.antagoniste.MonkC.n_Mpos.n_My );
 
-
-
-
-        Tour_De_Jeu(plateau.map_P.tabPiste, &plateau.n_p, plateau.map_Monk.tabMonk, &plateau.antagoniste); //problème se situant dans Tour de jeu -> Observation
+        Tour_De_Jeu(plateau.map_P.tabPiste, &plateau.n_p, plateau.map_Monk.tabMonk, &plateau.antagoniste, &nb_P); //problème se situant dans Tour de jeu -> Observation
         system("pause");
 
     }while(deadM==0);//se termine quand la vie de Monk C atteint 0
@@ -30,9 +26,10 @@ int main()
     if(deadM==1){
 
         printf("Vous aves vaincu Monk C !");
+
     }else if(deadM==2){
 
-        printf("Monk C a devore tout vos pisteur, c'est perdu.");
+        printf("Monk C a devore tout vos pisteurs, c'est perdu.");
 
     }
 

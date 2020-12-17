@@ -14,6 +14,8 @@ void Deplacement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
     char c; // sert pour la direction
     int ok=0; //booleen
 
+  if(Pcara->n_Pvie==1){
+
     Affichage(plateau.map_P.tabPiste);
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=' ';//efface le pisteur de sa derniere psition
 
@@ -139,7 +141,7 @@ void Deplacement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
  //   Pcara->n_Ppos.n_Px=n_x;
  //   Pcara->n_Ppos.n_Py=n_y;
 
-    system("pause");
+   // system("pause");
     system("cls");
     printf("Coordonnee x : %d, y : %d \n", Pcara->n_Ppos.n_Px, Pcara->n_Ppos.n_Py);
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR1;
@@ -147,5 +149,7 @@ void Deplacement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
     Affichage(plateau.map_P.tabPiste);
     system("pause");
     system("cls");
+
+    }
 }
 

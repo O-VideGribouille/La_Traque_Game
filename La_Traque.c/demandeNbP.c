@@ -5,10 +5,9 @@
 //.h
 #include "valeurs.h"
 
-char Demande_nb_P(){
+int Demande_nb_P(int *nb_P){
 
     //init nombre de pisteur
-    int nb_P=0;
     int ok=0; //booleen ok=false;
 
     //boucle pour definir le nombre de joueur

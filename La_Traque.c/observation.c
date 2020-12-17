@@ -15,7 +15,7 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
     char chr_c;
     int n_recp;
    // char chr_x;
-   // int ok=0; //booleen
+    int ok; //booleen
     int numCase=1;
     int jetD=0;
     int VueMnK=0;
@@ -23,6 +23,8 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
     printf("Vos pisteurs sont en phase d'observation, ils vous previendont si les cases voisines sont vides ou\n");
     printf("si au contraire quelque chose y est present.\n");
     printf("Si un pisteur vous indique que Monk C est dans l'une de ses cases voisines, appyer sur la touche 'T' pour tirer.\n");
+
+    system("pause");
 
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR2;
     Affichage(plateau.map_P.tabPiste);
@@ -36,8 +38,6 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 
 
             //le probleme debute avec cette boucle
-           // for(n_i=Pcara->n_Ppos.n_Py-1; n_i<Pcara->n_Ppos.n_Py+2; n_i++){
-             //   for(n_j=Pcara->n_Ppos.n_Px-1; n_j<Pcara->n_Ppos.n_Px+2; n_j++){
             for(n_i=Pcara->n_Ppos.n_Py-1; n_i<Pcara->n_Ppos.n_Py+2; n_i++){
                 for(n_j=Pcara->n_Ppos.n_Px-1; n_j<Pcara->n_Ppos.n_Px+2; n_j++){
 
@@ -45,19 +45,12 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
                         //verification de la presence de MONK C
                          if(tabMnK[n_i][n_j]==16){
 
-                            printf("\nMonstre en vue ! [T]irer !\n");
-                            printf("\n En case %d \n", numCase);
+                            printf("\nMonstre en vue !\n");
+                           // printf("\n En case %d \n", numCase);
                             VueMnK=1; //permettra l'activation de la fonction Tirer
                             //a ete deplace pour voir si leprobleme ne venait pas de sa presence dans la boucle de verification
-                           /* scanf("%c", &chr_c);
-                            chr_c=toupper(chr_c);
 
-                            n_recp=Tirer(jetD, Mcara);
-                            fflush(stdin);
 
-                            if(Mcara->n_Mvie==0){
-                                deadM=1;
-                            } */
 
                           //verification d'empreintes //celles-ci n'ont pas encore etees mis en place, actuelemnt Test NUL
  /*                      }else if((tabMnK[n_i][n_j]>=2)&&(tabMnK[n_i][n_j]<=15)){ //inverser le i et j ?
@@ -102,30 +95,31 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 
     //Boucle permettant l'action de tir après la totalite des verifications des case autour du pisteur
     if(VueMnK == 1){
-        scanf("%c", &chr_c);
-        chr_c=toupper(chr_c);
+        do{
+            printf("[T]irer !\n");
+            scanf("%c", &chr_c);
+            chr_c=toupper(chr_c);
 
-        n_recp=Tirer(jetD, Mcara);
-        fflush(stdin);
+            if(chr_c=='T'){
+                n_recp=Tirer(jetD, Mcara);
+                ok=1;
+                fflush(stdin);
+            }else if(chr_c!='T'){
+                ok=0;
+            }
 
-        if(Mcara->n_Mvie==0){
-            deadM=1;
-        }
+            if(Mcara->n_Mvie==0){
+                deadM=1;
+            }
+        }while(ok==0);
     }
 
-
-
-
-
-   // Pcara->n_Ppos.n_Px=n_x;
-   // Pcara->n_Ppos.n_Py=n_y;
-
-    system("pause");
-    system("cls");
+   // system("pause");
+   // system("cls");
   //  printf("Coordonnee x : %d, y : %d \n", n_x, n_y);
     //tabJ[n_y][n_x]=PISTEUR1;
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR1;
-    Affichage(plateau.map_P.tabPiste);
+   // Affichage(plateau.map_P.tabPiste);
     system("pause");
     system("cls");
 
@@ -137,7 +131,7 @@ int Tirer(int jetD, struct str_Mcara *Mcara){
       //lancement des deux dés
         jetD= (rand() %
            (10 - 0 + 1)) + 1;
-        printf("%d \n", jetD);
+        printf("Valeur aleatoire de : %d \n", jetD);
     //text en fonction de si l'on touche ou non le monstre
     if((jetD>=1)&&(jetD<=4)){
         printf("\n TOUCHE \n");
