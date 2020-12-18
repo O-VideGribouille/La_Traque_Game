@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <string.h>
+#include <time.h>
 //.h
 #include "valeurs.h"
 
@@ -20,9 +21,9 @@ void Positionnement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL],
 
 
     do{
-        //Etape 1 : Coordonees
+        //Etape 1 : Coordonees Random
         //coordonnee de X
-     /*   do{
+        do{
             srand(time(0));//evite que le random soit le meme a chaque premier jet
             n_x=RandomL(jetD);
             if((n_x<=0)||(n_x>=LMAX)){
@@ -45,42 +46,7 @@ void Positionnement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL],
                 ok=1;
             }
             fflush(stdin);
-        }while(ok==0);*/
-
-
-
-        //test
-         do{
-
-            printf("Coordonne X (maximum 26) : ");
-            scanf("%d",&n_x);
-            if((n_x<=0)||(n_x>=LMAX)){
-                printf("Emplacement impossible, veuillez entrer des coordonees existantes\n");
-                    ok=0;
-            }else{
-                ok=1;
-            }
-            fflush(stdin);
         }while(ok==0);
-
-        //coordonnee de Y
-        do{
-            printf("Coordonne Y (maximum 12) : ");
-            scanf("%d",&n_y);
-            if((n_y<=0)||(n_y>=HMAX)){
-                printf("Emplacement impossible, veuillez entrer des coordonees existantes\n");
-                    ok=0;
-            }else{
-                ok=1;
-            }
-            fflush(stdin);
-        }while(ok==0);
-
-
-
-
-
-
 
 
         ok=0;

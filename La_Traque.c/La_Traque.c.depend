@@ -6,7 +6,7 @@
 	<string.h>
 	"valeurs.h"
 
-1608230273 c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\valeurs.h
+1608287408 c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\valeurs.h
 
 1608222421 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\main.c
 	<stdio.h>
@@ -29,42 +29,44 @@
 	<string.h>
 	"valeurs.h"
 
-1607971522 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\positionnementp.c
+1608289739 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\positionnementp.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<string.h>
 	"valeurs.h"
 
-1608229052 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\miseenplace.c
+1608290805 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\miseenplace.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<string.h>
 	"valeurs.h"
 
-1608230176 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\tourdejeu.c
+1608290559 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\tourdejeu.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<string.h>
 	"valeurs.h"
 
-1608223367 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\observation.c
+1608289846 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\observation.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<string.h>
+	<time.h>
 	"valeurs.h"
 
-1607718392 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\positionnementm.c
+1608288896 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\positionnementm.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<string.h>
+	<time.h>
 	"valeurs.h"
 
-1608230356 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\deplacementm.c
+1608288998 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\deplacementm.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
@@ -86,14 +88,14 @@
 	<string.h>
 	"valeurs.h"
 
-1608223459 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\deplacementp.c
+1608289732 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\deplacementp.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>
 	<string.h>
 	"valeurs.h"
 
-1608230424 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\observationm.c
+1608289602 source:c:\users\laboi\desktop\ludus académie\annee_2020-2021\algorithme\exercice_tp\examen_decembre_2020\la_traque.c\observationm.c
 	<stdio.h>
 	<stdlib.h>
 	<windows.h>

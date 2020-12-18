@@ -113,7 +113,7 @@ void Deplacement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], st
 
 
 int entier(char chr_x);
-int Tirer(int jetD, struct str_Mcara *Mcara);
+void Tirer(int jetD, struct str_Mcara *Mcara);
 char OrientPiste();
 
 #endif // VALEURS_H_INCLUDED

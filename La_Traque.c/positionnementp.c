@@ -12,6 +12,7 @@ void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
    // char c;
     int ok=0; //booleen
 
+    printf("\n      Tout du pisteur %s\n", Pcara->chr_Pname);
     Affichage(plateau.map_P.tabPiste);
 
 

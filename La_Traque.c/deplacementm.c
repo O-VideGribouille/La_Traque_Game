@@ -8,7 +8,7 @@
 
 //PROTOTYPES
 int RandomDrt(int jetD);
-//int Trace();
+void Trace(int tabMnK[TAILLEH][TAILLEL]);
 
 
 void Deplacement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara){
@@ -26,6 +26,7 @@ void Deplacement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], st
  //   tabMnK[Mcara.n_Mpos.n_My][Mcara.n_Mpos.n_Mx]=' ';
 //    Affichage(plateau.map_Monk.tabMonk);
  //   system("pause");
+    Trace(tabMnK);//diminution de la valeur des traces
     do{
         //Etape 1 : nouvelles coordonnees
         do{
@@ -39,13 +40,10 @@ void Deplacement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], st
             fflush(stdin);
         }while(ok==0);
 
-       // n_dep=Direction(n_drct, Mcara->n_Mpos); //fonction pour assimiler la valeur obtenu précedement a la ligne de code de direction
-
-
         ok=0;
 
         //Etape 2 : emplacement deja prit
-            //HAUT
+        //HAUT
         if((n_drct==1)&&((Mcara->n_Mpos.n_My-1>=0)&&(Mcara->n_Mpos.n_Mx-1<=TAILLEL-2))){
 
             ok=1;// ok=true;
@@ -87,11 +85,9 @@ void Deplacement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], st
 
     }while(ok==0);
 
-   // system("pause");
-   // system("cls");
-    //printf("Coordonnee x : %d, y : %d \n", Mcara->n_Mpos.n_Mx, Mcara->n_Mpos.n_My);
-    tabMnK[Mcara->n_Mpos.n_My][Mcara->n_Mpos.n_Mx]=MONK;
-  //  Affichage(plateau.map_Monk.tabMonk);
+
+    tabMnK[Mcara->n_Mpos.n_My][Mcara->n_Mpos.n_Mx]=MONK+1;
+
     system("pause");
     system("cls");
 }
@@ -106,6 +102,19 @@ int RandomDrt( int jetD){
 }
 
 
-int Trace(){
+void Trace(int tabMnK[TAILLEH][TAILLEL]){
+
+    int n_i, n_j;
+
+    for(n_i=0; n_i<TAILLEH; n_i++){
+        for(n_j=0; n_j<TAILLEL; n_j++){
+
+            if( tabMnK[n_i][n_j]>0){
+
+               tabMnK[n_i][n_j]-=1;
+            }
+
+        }
+    }
 
 }

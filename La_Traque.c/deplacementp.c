@@ -8,14 +8,15 @@
 
 void Deplacement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
 
-    int n_i, n_j; //boucles
+    //int n_i, n_j; //boucles
     int n_dep; //augmentation ou diminution d'un coordonnee
-    int n_x, n_y; //coordonees
+   // int n_x, n_y; //coordonees
     char c; // sert pour la direction
     int ok=0; //booleen
 
   if(Pcara->n_Pvie==1){
 
+    printf("\n      Tout du pisteur %s\n", Pcara->chr_Pname);
     Affichage(plateau.map_P.tabPiste);
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=' ';//efface le pisteur de sa derniere psition
 

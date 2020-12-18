@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <string.h>
+#include <time.h>
 //.h
 #include "valeurs.h"
 
@@ -13,7 +14,7 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
     int n_i, n_j; //boucles
     //int n_x, n_y; //coordonees
     char chr_c;
-    int n_recp;
+    int n_recp=0;
    // char chr_x;
     int ok; //booleen
     int numCase=1;
@@ -26,8 +27,11 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 
     system("pause");
 
+     printf("\n      Tout du pisteur %s\n", Pcara->chr_Pname);
+
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR2;
     Affichage(plateau.map_P.tabPiste);
+    system("pause");
 
         //Etape 1 : verification autour du pisteur
 
@@ -53,41 +57,38 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 
 
                           //verification d'empreintes //celles-ci n'ont pas encore etees mis en place, actuelemnt Test NUL
- /*                      }else if((tabMnK[n_i][n_j]>=2)&&(tabMnK[n_i][n_j]<=15)){ //inverser le i et j ?
+                       }else if((tabMnK[n_i][n_j]>=2)&&(tabMnK[n_i][n_j]<=15)){ //inverser le i et j ?
 
                                // printf("Tour %d", n_i);
 
                             if((tabMnK[n_i][n_j]>=2)&&(tabMnK[n_i][n_j]<=5)){
 
-                                printf("\nLa trace est ancienne, sa valeur est de\n");
+                                printf("\nLa trace est ancienne, sa valeur est de %d\n en case %d", tabMnK[n_i][n_j], numCase);
                             }
 
                             if((tabMnK[n_i][n_j]>=6)&&(tabMnK[n_i][n_j]<=9)){
 
-                                printf("\nLa trace est plus recente, sa valeur est de\n");
+                                printf("\nLa trace est plus recente, sa valeur est de %d en case %d\n", tabMnK[n_i][n_j], numCase);
                             }
 
                             if((tabMnK[n_i][n_j]>=10)&&(tabMnK[n_i][n_j]<=13)){
 
-                                printf("\nLa trace est bien plus fraiche ! Sa valeur est de\n");
+                                printf("\nLa trace est bien plus fraiche ! Sa valeur est de %d en case %d\n", tabMnK[n_i][n_j], numCase);
                             }
 
                             if((tabMnK[n_i][n_j]==14)||(tabMnK[n_i][n_j]==15)){
 
-                                printf("\nMonk C est tout proche ! La valeur est de\n");
+                                printf("\nMonk C est tout proche ! La valeur est de %d en case %d\n", tabMnK[n_i][n_j], numCase);
                             }
 
                             //Si case vide
-                       */ }else if(tabMnK[n_j][n_i]==0){
+                        }else if(tabMnK[n_j][n_i]==0){
 
                             printf("\nRien en case %d \n", numCase);
 
                         }
 
                         numCase++;
-
-                      //  system("pause");
-                        //system("cls");
 
                 }
 
@@ -101,7 +102,7 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
             chr_c=toupper(chr_c);
 
             if(chr_c=='T'){
-                n_recp=Tirer(jetD, Mcara);
+                Tirer(jetD, Mcara);
                 ok=1;
                 fflush(stdin);
             }else if(chr_c!='T'){
@@ -126,7 +127,7 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 }
 
 //fonction permettant 40% de chance reussite de touche
-int Tirer(int jetD, struct str_Mcara *Mcara){
+void Tirer(int jetD, struct str_Mcara *Mcara){
 
       //lancement des deux dés
         jetD= (rand() %
@@ -143,6 +144,6 @@ int Tirer(int jetD, struct str_Mcara *Mcara){
     }
       fflush(stdin);
 
-    return jetD;
+    //return jetD;
 
 }

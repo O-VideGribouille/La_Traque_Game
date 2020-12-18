@@ -5,7 +5,7 @@
 #include <time.h>
 //.h
 #include "valeurs.h"
-
+void Trace(int tabMnK[TAILLEH][TAILLEL]);
 
 void Observation_M(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara, int *nb_P, int *n_vu){
    // int n_i, n_j; //boucles
@@ -18,6 +18,8 @@ printf("\nMonk C observe...\n");
                     //manger un pisteur
                     *n_vu=1;
 
+                    Trace(tabMnK);//diminution de la valeur des traces
+
                     Mcara->n_Mpos.n_Mx=Mcara->n_Mpos.n_Mx;
                     Mcara->n_Mpos.n_My=Mcara->n_Mpos.n_My-1;
 
@@ -29,6 +31,8 @@ printf("\nMonk C observe...\n");
                     //manger un pisteur
                     *n_vu=1;
 
+                    Trace(tabMnK);//diminution de la valeur des traces
+
                     Mcara->n_Mpos.n_Mx=Mcara->n_Mpos.n_Mx;
                     Mcara->n_Mpos.n_My=Mcara->n_Mpos.n_My+1;
 
@@ -38,6 +42,8 @@ printf("\nMonk C observe...\n");
     }else if(((tabJ[Mcara->n_Mpos.n_My][Mcara->n_Mpos.n_Mx-1])==PISTEUR1)){
                     //manger un pisteur
                     *n_vu=1;
+
+                    Trace(tabMnK);//diminution de la valeur des traces
 
                     Mcara->n_Mpos.n_Mx=Mcara->n_Mpos.n_Mx-1;
                     Mcara->n_Mpos.n_My=Mcara->n_Mpos.n_My;
@@ -49,6 +55,8 @@ printf("\nMonk C observe...\n");
     }else if(((tabJ[Mcara->n_Mpos.n_My][Mcara->n_Mpos.n_Mx+1])==PISTEUR1)){
                     //manger un pisteur
                     *n_vu=1;
+
+                    Trace(tabMnK);//diminution de la valeur des traces
 
                         Mcara->n_Mpos.n_Mx=Mcara->n_Mpos.n_Mx+1;
                         Mcara->n_Mpos.n_My=Mcara->n_Mpos.n_My;
@@ -63,7 +71,7 @@ printf("\nMonk C observe...\n");
         printf("\nMonk C devore votre pisteur !\n");
 
     }else if(*n_vu==0){
-        printf("\nMonk C n'a rien trouve.\n");
+        printf("\nMonk C ne trouve rien.\n");
 
     }
 
@@ -76,7 +84,8 @@ printf("\nMonk C observe...\n");
     // printf("Coordonnee x : %d, y : %d \n", Mcara->n_Mpos.n_Mx, Mcara->n_Mpos.n_My);
    // printf("deadM vaut : %d", deadM);
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=' ';
-    tabMnK[Mcara->n_Mpos.n_My][Mcara->n_Mpos.n_Mx]=MONK;
+    tabMnK[Mcara->n_Mpos.n_My][Mcara->n_Mpos.n_Mx]=MONK+1;
+   // Trace(tabMnK);//diminution de la valeur des traces
 
     system("pause");
     //system("cls");

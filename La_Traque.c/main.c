@@ -13,7 +13,7 @@ int main()
 
     Init(&plateau, &nb_P);
     //Affichage(plateau.map_P.tabPiste);
-    Mise_En_Place(plateau.map_P.tabPiste, &plateau.n_p, plateau.map_Monk.tabMonk, &plateau.antagoniste, nb_P);// positionnement des pisteur et de Monk C
+    Mise_En_Place(plateau.map_P.tabPiste, &plateau.n_p, plateau.map_Monk.tabMonk, &plateau.antagoniste, &nb_P);// positionnement des pisteur et de Monk C
     //début de la boucle de jeu
     do{
 
