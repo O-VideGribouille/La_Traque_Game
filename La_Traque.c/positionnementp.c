@@ -21,7 +21,7 @@ void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara){
         //coordonnee de X
         do{
 
-            printf("Coordonne X (maximum 26) : ");
+            printf("Coordonne X (maximum 27) : ");
             scanf("%d",&n_x);
             if((n_x<=0)||(n_x>=LMAX)){
                 printf("Emplacement impossible, veuillez entrer des coordonees existantes\n");

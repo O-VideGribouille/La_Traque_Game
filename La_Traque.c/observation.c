@@ -14,12 +14,14 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
     int n_i, n_j; //boucles
     //int n_x, n_y; //coordonees
     char chr_c;
-    int n_recp=0;
+    //int n_recp=0;
    // char chr_x;
     int ok; //booleen
     int numCase=1;
     int jetD=0;
     int VueMnK=0;
+
+    if(Pcara->n_Pvie==1){
 
     printf("Vos pisteurs sont en phase d'observation, ils vous previendont si les cases voisines sont vides ou\n");
     printf("si au contraire quelque chose y est present.\n");
@@ -123,6 +125,7 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
    // Affichage(plateau.map_P.tabPiste);
     system("pause");
     system("cls");
+    }
 
 }
 
