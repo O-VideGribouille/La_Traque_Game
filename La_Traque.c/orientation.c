@@ -7,7 +7,7 @@
 
 
 char OrientPiste(){
-    char p;
+    char p; // caractere de recuperation pour indiquer la direction choisit par l'utilisateur
     int ok=0; //ok=false;
 
 
@@ -19,7 +19,6 @@ char OrientPiste(){
 
     if((p=='G')||(p=='D')||(p=='H')||(p=='B')){
             ok=1; //ok=true;
-            //printf("ok = true");
     }
 
     }while(ok==0);

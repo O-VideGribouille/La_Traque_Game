@@ -7,7 +7,7 @@
 
 
 extern void Affichage(char tabJ[TAILLEH][TAILLEL]){
-
+//Affiche le visuel du plateau
   int n_i, n_j;
 
     for(n_i=0; n_i<TAILLEH; n_i++){

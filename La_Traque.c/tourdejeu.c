@@ -8,15 +8,14 @@
 
 void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk, int *nb_P){
 
-int n_vu;
+int n_vu; //booleen
 
     if(*nb_P==1){
         //position pisteur
         printf("\nNombre de pisteurs : %d\n", *nb_P); // rappel du nombre total depisteur
 
-
-        if(piste->pisteurs1.n_Pvie==1){
         //Tour de jeu pisteur 1
+        if(piste->pisteurs1.n_Pvie==1){
             Observation_P(tabJ, &piste->pisteurs1, tabMnK, &Monk->MonkC);
             Deplacement_P(tabJ, &piste->pisteurs1);
         }

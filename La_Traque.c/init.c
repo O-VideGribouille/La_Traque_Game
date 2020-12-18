@@ -8,12 +8,13 @@
 extern void Init(struct str_plateau *plateau, int *nb_P){
 
     //init du plateau du jeu
-    int n_i, n_j;
-    char caractere;
+    int n_i, n_j; //boucle
+    char caractere; //ceractere qui s'affichera pour le visuel du plateau
+
     //initn tab Pisteurs en Caracteres
     for(n_i=0; n_i<TAILLEH; n_i++){
         for(n_j=0; n_j<TAILLEL; n_j++){
-
+            //Conception de la bordure du plateau
            if(n_i==0){
                 caractere='*';
             }
@@ -27,25 +28,22 @@ extern void Init(struct str_plateau *plateau, int *nb_P){
             if(n_j==28){
                 caractere='*';
             }
-
+            //Concerne l'interieur du plateau
            else if((n_i!=0)&&(n_j!=0)&&(n_i!=13)&&(n_j!=28)){
                 caractere=' ';
             }
-            //caractere='*';
-
+            //On assimile le caractere a une position dans le tableau
             plateau->map_P.tabPiste[n_i][n_j]=caractere;
-           // plateau->map_Monk.tabMonk[n_i][n_j]=caractere;
-
-
         }
     }
-
+    //affichae du plateau vierge de toutes dispositions
     Affichage(plateau->map_P.tabPiste);
+
     //initn tab Monk C en Entier
     int car;
     for(n_i=0; n_i<TAILLEH; n_i++){
         for(n_j=0; n_j<TAILLEL; n_j++){
-
+            //de la bordure du second plateau
            if(n_i==0){
                 car=-1;
             }
@@ -59,24 +57,24 @@ extern void Init(struct str_plateau *plateau, int *nb_P){
             if(n_j==28){
                 car=-1;
             }
-
+            //Concerne l'interieur du plateau
            else if((n_i!=0)&&(n_j!=0)&&(n_i!=13)&&(n_j!=28)){
                 caractere=0;
             }
-
+            //On assimile le caractere a une position dans le tableau
             plateau->map_Monk.tabMonk[n_i][n_j]=caractere;
-
-
         }
     }
 
-    //init des pisteur
+
+    //init des pisteurs
+
     //nombre de pisteur
-    //int nb_Pist=0;
     *nb_P=Demande_nb_P(nb_P);
 
     //init de leur vie
     int n_pVie=PVIE;
+
     plateau->n_p.pisteurs1.n_Pvie=n_pVie;
     plateau->n_p.pisteurs2.n_Pvie=n_pVie;
     plateau->n_p.pisteurs3.n_Pvie=n_pVie;
@@ -105,9 +103,11 @@ extern void Init(struct str_plateau *plateau, int *nb_P){
 
 
     //init Monk C
+
     //init vie
     int n_mVie= MVIE;
     plateau->antagoniste.MonkC.n_Mvie=n_mVie;
+
     //init nom
     plateau->antagoniste.MonkC.chr_Mname=("Monk C");
 

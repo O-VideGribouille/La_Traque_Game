@@ -6,14 +6,14 @@
 #define TAILLEL 29 //taille plateau
 
 #define HMAX 13 //valeur maximum a entrer pour positionnementp
-#define LMAX 27 //valeur maximum a entrer pour positionnementp
+#define LMAX 28 //valeur maximum a entrer pour positionnementp
 
 #define RANDOMLMAX 26
 #define RANDOMHMAX 12
 
 #define PVIE 1 //nombre de vie des pisteurs
 #define MVIE 4 // noombre de vie de Monk C
-//#define MONK 'M' //représentation visuel de Monk C
+
 #define MONK 16 //représentation visuel de Monk C
 #define PISTEUR1 'P' //Représentation visuel de pisteur fixe
 #define PISTEUR2 '!' //Représentation visuel de pisteur en observation
@@ -39,21 +39,21 @@ typedef struct str_Pcara{
     int n_Pvie; //nombre de vie
     str_coord n_Ppos; //position
     char *chr_Pname; // nom
-    //creation d'un booleen pour valider leur présence ?
 
 }str_Pcara;
 
 //Caracteristiques - Monk C
 typedef struct str_Mcara{
 
-    int n_Mvie;
-    str_coord n_Mpos;
-    char *chr_Mname;
+    int n_Mvie; //nombre de vie
+    str_coord n_Mpos; //position
+    char *chr_Mname; // nom
+
 }str_Mcara;
 
 //possibilité du nombre de pisteurs
 typedef struct str_Pisteurs{
-
+    //variable par pisteur jouable
     str_Pcara pisteurs1;
     str_Pcara pisteurs2;
     str_Pcara pisteurs3;
@@ -74,19 +74,22 @@ typedef struct str_Monk{
 
 }str_Monk;
 
+//tableaux
 typedef struct str_map{
-
+    //tableau plateau visible
     char tabPiste[TAILLEH][TAILLEL];
+    //tableau plateau invisible
     int tabMonk[TAILLEH][TAILLEL];
 
 }str_map;
 
+//Composition plateau
 typedef struct str_plateau{
 
-    str_map map_P;
-    str_map map_Monk;
-    str_Pisteurs n_p;
-    str_Monk antagoniste;
+    str_map map_P; //entree tableau visible
+    str_map map_Monk; //entree tableau invisible
+    str_Pisteurs n_p; // entree numero pisteur
+    str_Monk antagoniste; // entree Monk C
 
 }str_plateau;
 
@@ -103,14 +106,10 @@ void Positionnement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara);
 void Positionnement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], struct str_Mcara *Mcara);
 void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk, int *nb_P);
 void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk, int *nb_P);
-//void Tour_De_Jeu(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste);
 void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara);
 void Deplacement_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara);
 void Observation_M(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara, int *nb_P, int *n_vu);
-
 void Deplacement_M(int tabMnK[TAILLEH][TAILLEL], char tabJ[TAILLEH][TAILLEL], str_Mcara *Mcara);
-
-
 
 int entier(char chr_x);
 void Tirer(int jetD, struct str_Mcara *Mcara);

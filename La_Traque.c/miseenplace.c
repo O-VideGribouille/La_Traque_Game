@@ -8,9 +8,12 @@
 
 void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int tabMnK[TAILLEH][TAILLEL], struct str_Monk *Monk, int *nb_P){
 
+    //Boucle de positionnemnt en fonction du nombre de pisteur demande
+
     if(*nb_P==1){
         //position pisteur
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
 
         //position Monk C
@@ -19,6 +22,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
    else if(*nb_P==2){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
 
@@ -28,6 +32,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
      else if(*nb_P==3){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -38,6 +43,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==4){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -49,6 +55,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==5){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -61,6 +68,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==6){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -74,6 +82,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==7){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -88,6 +97,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==8){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -103,6 +113,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==9){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);
@@ -119,6 +130,7 @@ void Mise_En_Place(char tabJ[TAILLEH][TAILLEL], struct str_Pisteurs *piste, int 
     else if(*nb_P==10){
         //position pisteurs
         printf("\nNombre de pisteurs : %d\n",*nb_P);
+
         Positionnement_P(tabJ, &piste->pisteurs1);
         Positionnement_P(tabJ, &piste->pisteurs2);
         Positionnement_P(tabJ, &piste->pisteurs3);

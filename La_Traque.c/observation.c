@@ -7,19 +7,13 @@
 #include "valeurs.h"
 
 void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tabMnK[TAILLEH][TAILLEL], struct str_Mcara *Mcara){
-//void Observation_P(){
-
-//printf("entrer");
 
     int n_i, n_j; //boucles
-    //int n_x, n_y; //coordonees
-    char chr_c;
-    //int n_recp=0;
-   // char chr_x;
+    char chr_c; //caractere de recuperation + actionnement de la fonction Tirer
     int ok; //booleen
-    int numCase=1;
-    int jetD=0;
-    int VueMnK=0;
+    int numCase=1; // sert a la numerotation des case entourant le pisteurs
+    int jetD=0; //recuperation de la valeur
+    int VueMnK=0; //booleen
 
     if(Pcara->n_Pvie==1){
 
@@ -29,15 +23,14 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 
     system("pause");
 
-     printf("\n      Tout du pisteur %s\n", Pcara->chr_Pname);
+    printf("\n      Tout du pisteur %s\n", Pcara->chr_Pname);
 
-    tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR2;
+    tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR2; //Changement de visuel du pisteur en jeu
     Affichage(plateau.map_P.tabPiste);
     system("pause");
 
         //Etape 1 : verification autour du pisteur
 
-           // int voisincase=1;
            srand(time(0));//evite que le random soit le meme a chaque premier jet
             //Boucle pour verifier autour du pisteur
             //regard les neuf cas, dont le positionnement du pisteur qui sera toujours NUL
@@ -52,7 +45,6 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
                          if(tabMnK[n_i][n_j]==16){
 
                             printf("\nMonstre en vue !\n");
-                           // printf("\n En case %d \n", numCase);
                             VueMnK=1; //permettra l'activation de la fonction Tirer
                             //a ete deplace pour voir si leprobleme ne venait pas de sa presence dans la boucle de verification
 
@@ -60,8 +52,6 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
 
                           //verification d'empreintes //celles-ci n'ont pas encore etees mis en place, actuelemnt Test NUL
                        }else if((tabMnK[n_i][n_j]>=2)&&(tabMnK[n_i][n_j]<=15)){ //inverser le i et j ?
-
-                               // printf("Tour %d", n_i);
 
                             if((tabMnK[n_i][n_j]>=2)&&(tabMnK[n_i][n_j]<=5)){
 
@@ -91,7 +81,6 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
                         }
 
                         numCase++;
-
                 }
 
             }
@@ -117,12 +106,7 @@ void Observation_P(char tabJ[TAILLEH][TAILLEL], struct str_Pcara *Pcara, int tab
         }while(ok==0);
     }
 
-   // system("pause");
-   // system("cls");
-  //  printf("Coordonnee x : %d, y : %d \n", n_x, n_y);
-    //tabJ[n_y][n_x]=PISTEUR1;
     tabJ[Pcara->n_Ppos.n_Py][Pcara->n_Ppos.n_Px]=PISTEUR1;
-   // Affichage(plateau.map_P.tabPiste);
     system("pause");
     system("cls");
     }
@@ -146,7 +130,5 @@ void Tirer(int jetD, struct str_Mcara *Mcara){
 
     }
       fflush(stdin);
-
-    //return jetD;
 
 }
